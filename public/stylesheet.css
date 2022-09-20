@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+main {
+    padding: 36px;
+}
+
+header {
+    background-color: rgb(170, 170, 248);
+    color: rgb(255, 255, 255); 
+    display: flex;
+    align-items: center;
+    height: 65px;
+
+}
+
+.cowimage-1 {
+    width: 65px;
+    height: auto;
+    padding-left: 10px 10px;
+}
+
+h2 {
+    padding-left: 70%;
+}
+
+.form {
+    display: grid;
+    grid-template: 40px 40px / lfr lfr;
+}
+
+.form--button {
+    grid-column: 1 / -1;
+}
+
+.form--input {
+    font-family: "karla", sans-serif;
+    border-radius: 5px black;
+    border: 1px solid black;
+    text-indent: 5px;
+}
+
+.meme--image {    
+    padding-left: 20%;
+
+}
