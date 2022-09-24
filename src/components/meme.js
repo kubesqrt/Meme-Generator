@@ -7,7 +7,6 @@ import memesData from "../Memesdata";
 
 export default function Meme() {
 
-    //const [memeImage, setMemeImage] = React.useState("http://i.imgflip.com/1bij.jpg")
 
     const [meme, setMeme] = React.useState({
         topText: "",
@@ -17,17 +16,14 @@ export default function Meme() {
     })
     const [allMemes, setAllMemes] = React.useState([])
 
-       React.useEffect(() =>{
-        async function getMemes(){
+    React.useEffect(() =>{
+        async function getMemes() {
             const res = await fetch("https://api.imgflip.com/get_memes")
             const data = await res.json()
             setAllMemes(data.data.memes)
         } 
         getMemes()
 
-       // fetch("https://api.imgflip.com/get_memes")
-       // .then(res => res.json())
-       // .then(data => setAllMemes(data.data.memes))
     }, [])
 
 
@@ -72,11 +68,11 @@ export default function Meme() {
                 <button 
                 className="form--button" 
                 onClick={getMemeImage}>
-                NEW MEME!
+                New Meme
                 </button>
             </div>
             <div className="meme">
-            <img src={meme.randomImage} clasName="meme--image" width="40%"/>
+            <img src={meme.randomImage} className="meme--image" alt='' />
             <h2 className="meme--text top">{meme.topText}</h2>
             <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>

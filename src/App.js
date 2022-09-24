@@ -4,7 +4,7 @@ import Meme from "./components/meme"
 
 export default function App() {
   return(
-  <div>
+  <div className="whole">
     <Header />
     <Meme />
   </div>
